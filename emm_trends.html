@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="expires" content="-1">
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <script>
+    window.onload = function() {
+        if (screen.width < 500) {
+            var mvp = document.getElementById('vp');
+            mvp.setAttribute('content','user-scalable=no,width=900');
+        }
+    }
+    </script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="emm_style.css" rel="stylesheet">
+  <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-dg6o{background-color:#000000;color:#ffffff;text-align:left;vertical-align:top}
+    .tg .tg-0lax{text-align:left;vertical-align:top}
+  </style>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+
+<div style="width: 50%; min-width: 700px;float: left; margin-bottom: 8%;">
+  <div style=" padding: 15px; margin: 0 2% 4% 0;">
+    <h3 style="border-bottom: 1px solid; margin: 0 0 8px 0;font-size:32;">Circulating Strains in iGAS Genomes by Quarter</h3>
+    <div style="position: relative; padding-top: 70%;">
+    <div>
+      <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="graphs/emm_type_stacked_bar.html" loading="lazy"></iframe>
+    </div>
+    </div>
+  </div>
+  <!--<p style="padding-left: 15px; padding-top:15px;">Emm-type sequencing has identified x different emm-types with x % of isolates sequencing to the ones displayed above. </p>-->
+  <div style="padding-left: 15px;"> <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#text1">Description of figure</button><br/>
+    <div id="text1" class="collapse">
+      <p style="padding-left: 15px;">Over 100 strains of GAS, known as emm-types, exist and can be identified through genomic sequencing. These emm-types are distinguished by a region of the M protein gene, which encodes the cell surface virulence protein.</p>
+     </div> 
+  </div>
+  
+</div>
+
+
+
+
+<div style="width: 50%; min-width: 700px;float: left; margin-bottom: 2%;">
+  <div style=" padding: 15px; margin: 0 2% 4% 0;">
+    <!--<h3 style="border-bottom: 1px solid; margin: 0 0 8px 0;font-size:32;"> </h3>-->
+    <div style="position: relative; width: 100%;height: 70%;">
+      <table class="tg">
+<thead>
+  <tr>
+    <th class="tg-dg6o">emm-type</th>
+    <th class="tg-dg6o"><span style="font-weight:400;font-style:normal">Description</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">emm1</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Most common emm-type, responsible for many infections and outbreaks worldwide. Endemic in Arizona, can lead to severe bacterial infections.</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">emm4</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Worldwide distribution, associated with erythromycin resistance. Endemic within Arizona.</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">emm12</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Global prevalence, associated with invasive disease, and reported to be resistant to antibiotics.</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">emm28</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">One of the most common emm-types to cause pharyngitis and invasive disease in North America.</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">emm43</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Worldwide distribution, associated with IV drug use, reported resistance to beta-lactam drugs.</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">emm49</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Associated with severe and fatal outbreaks globally, represented ~25% of all emm-types identified in Arizona in 2019-2021</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">emm59</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Hypervirulent strain first identified in Canada in 2006, and responsible for 2015 outbreak in Northern Arizona amongst incarcerated Native American. Associated with severe cases of bacteremia and soft tissue infections, homelessness, and IV drug use.</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">emm82</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Worldwide distribution, associated with IV drug use, endemic strain in Arizona</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">emm83</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Associated with homeless populations, IV drug use, and soft tissue infections</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">emm89</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Associated with global outbreaks, toxic shock syndrome, and endocarditis.</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">emm91</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Global distribution, but sporadically isolated, associated with skin colonization and infection.</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">emm92</span></td>
+    <td class="tg-0lax"><span style="font-weight:400;font-style:normal">Endemic globally and more common strain among children, reported resistance to macrolide antibiotics.</span></td>
+  </tr>
+</tbody>
+</table>
+      <div>
+      
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+</div>
+</body>
+</html>

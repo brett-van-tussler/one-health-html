@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    window.onload = function() {
+        if (screen.width < 500) {
+            var mvp = document.getElementById('vp');
+            mvp.setAttribute('content','user-scalable=no,width=900');
+        }
+    }
+    </script>
+    
+    
+  <title></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="emm_style.css" rel="stylesheet">
+  <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-dg6o{background-color:#000000;color:#ffffff;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<script src="jquery.js"></script> 
+<script> 
+    $(function(){
+      $("#includedContent").load("graphs/az_case_map.html"); 
+    });
+    </script> 
+</head>
+
+
+<body>
+
+
+
+<div style="width: 50%; min-width: 700px;float: left; margin-bottom: 8%;">
+  <div style="padding: 15px; margin: 0 2% 4% 0;">
+    <h3 style="border-bottom: 1px solid; margin: 0 0 8px 0;font-size:32;">Isolates Submitted for Sequencing since July of 2019</h3>
+    <div style="position: relative; width: 100%;height: 650px;">
+    <!--<embed style="width:100%;height:100%;" src = "graphs/az_case_map.html">-->
+
+      <iframe style="width: 100%; height: 100%;" src="graphs/az_case_map.html"></iframe>
+
+    </div>
+  </div>
+  <!--<p style='margin-left: 10px'>Emm-type sequencing has identified x different emm-types with x % of isolates sequencing to the ones displayed above.</p>-->
+</div>
+
+
+
+<div style="width: 50%; min-width: 700px;float: left; margin-bottom: 2%;">
+  <div style=" padding: 15px; margin: 0 2% 4% 0;">
+    <!--<h3 style="border-bottom: 1px solid; margin: 0 0 8px 0;font-size:32;"> </h3>-->
+    <div style="position: relative; width: 100%;">
+      <h3 style="border-bottom: 1px solid; margin: 0 0 8px 0;font-size:32;">Quantity of iGAS over time</h3>
+      <div>
+        <iframe style="width: 100%; height: 650px;" src="graphs/cases_line_plot.html"></iframe>  
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+</div>
+</body>
+</html>

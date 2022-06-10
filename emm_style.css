@@ -1,0 +1,142 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+p {
+  font-size: 20px;
+}
+h3 {
+  border-bottom: 1px solid; margin: 0 0 8px 0;font-size:32px;
+}
+body {
+  margin-bottom: 60px; 
+}
+
+.footer .date {
+  justify-content:flex-end;
+}
+.navbar-nav {
+  font-size:18px;
+  font-weight: bold;
+  height: 80px;
+}
+
+.tab {
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  background-color: #05AFB2;
+  border: 1px solid #FFFFFF;
+  padding-right: .5rem;
+  padding-left: .5rem;
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+.active {
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  background-color: #007C7C;
+  border: 1px solid #FFFFFF;
+  padding-right: .5rem;
+  padding-left: .5rem;
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+
+.navbar-dark .navbar-brand{
+  color:#000000 !important;
+  font-size:28;
+}
+.tab-pane {
+  margin:0;
+  padding:0;
+  height:100%;
+}
+.tab_object {
+  width:100%;
+  height:100%;
+  background:#FFFFFF;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  border: 5px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+  width:14%;
+  font-size:22;
+}
+button.navbar-toggler {
+  border-color: black;
+}
+button.navbar-toggler.navbar-toggler-icon {
+  border-color: black;
+
+}
+.btn, .btn:focus {
+  background-color: #35CB91;
+ 
+}
+
+
+.btn:hover, .btn:active {
+  background-color: #23966a !important;
+}
+
+iframe {
+  border: none;
+  min-width:250px;
+  min-height:30vw;
+  resize: both;
+  overflow: auto;
+}
+.nav-tabs {
+  background-color: #05AFB2;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px; 
+  background-color: #05AFB2;
+  display: flex; 
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+
+.main-container {
+  display:flex;
+  justify-content:space-around;
+}
+
+.main-container .flex-item {
+  padding:20px;
+  flex:1;
+  text-align:left;
+}
+
+@media screen and (max-width: 800px)  {
+  .main-container {
+     flex-wrap:wrap;
+  }
+  
+  .main-container .flex-item {
+     flex-basis:100%;
+  }
+
+}
