@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>One Health SARS-CoV-2 Surveillance Dashboard</title>
+    <style>
+        /* Style for the container */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Style for the header container */
+        .header {
+            background: linear-gradient(45deg, #7b68ee, #ff69b4); /* Gradient background for the header */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 75px;
+        }
+
+        /* Style for the title and image */
+        .title-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff; /* Solid white text color for the title */
+        }
+
+        /* Style for the image */
+        .logo-img {
+            margin-right: 10px; /* Add some space between the image and text */
+            height: 60px;
+            width: 143px;
+        }
+
+        /* Style for the footer */
+        .footer {
+            background: linear-gradient(45deg, #7b68ee, #ff69b4); /* Gradient background for the footer */
+            text-align: center;
+            padding: 10px 0;
+            color: #fff; /* Solid white text color for the footer */
+        }
+
+        .tab-container {
+            display: flex;
+            flex-direction: column; /* Change to column layout */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 100vh; /* Set container height to 100% of parent height minus header and footer */
+        }
+
+        /* Style for the tab buttons */
+        .tab-buttons {
+            display: flex; /* Display buttons side by side */
+            height: 100%; /* Take up the full height of the container */
+        }
+
+        .tab-button {
+            background: linear-gradient(180deg, #7b68ee 0%, #6a5acd 100%); /* Gradient background for the tab button */
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px 5px 0 0; /* Round only the top corners */
+            transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+            height: 100%; /* Take up the full height of the container */
+        }
+
+        .tab-button:hover {
+            background: linear-gradient(180deg, #6a5acd 0%, #7b68ee 100%); /* Reverse gradient on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+            transform: translateY(-1px); /* Add a slight lift on hover */
+        }
+
+        /* Style for the active tab button */
+        .active {
+            background: linear-gradient(180deg, #4b0082 0%, #6a5acd 100%); /* Gradient for active tab */
+            color: #fff;
+        }
+
+        /* Style for the tab content */
+        .tab-content {
+            padding: 0;
+            border: 1px solid #ddd;
+            border-radius: 0 0 5px 5px;
+            width: 100%;
+            box-sizing: border-box;
+            flex: 1; /* Take remaining vertical space */
+        }
+
+        /* Style for the iframe */
+        iframe {
+            width: 100%;
+            border: none;
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with the title and tabs -->
+    <div class="header">
+        <div class="title-container">
+            <img style="padding: 10px" src="images/TGen_North_CoH_Black_Medium.png" alt="" class="logo-img">
+            <div class="title">One Health SARS-CoV-2 Surveillance Dashboard</div>
+        </div>
+        <div class="tab-buttons">
+            <button class="tab-button active" id="tab1-button" onclick="openTab('tab1', 'scv2.html')">SCV2</button>
+            <button class="tab-button" id="tab2-button" onclick="openTab('tab2', 'wildlife_rehab.html')">Wildlife Rehab</button>
+            <button class="tab-button" id="tab3-button" onclick="openTab('tab3', 'acknowledgements.html')">Acknowledgments</button>
+        </div>
+    </div>
+
+    <div class="tab-container">
+        <!-- Tab content -->
+        <div class="tab-content" id="tab1">
+            <iframe src="scv2_new.html"></iframe>
+        </div>
+
+        <div class="tab-content" id="tab2" style="display: none;">
+            <iframe src="wildlife_rehab.html"></iframe>
+        </div>
+
+        <div class="tab-content" id="tab3" style="display: none;">
+            <iframe src="acknowledgements.html"></iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">© 2023 One Health SARS-CoV-2 Surveillance Dashboard</div>
+
+    <script>
+        // JavaScript function to switch tabs
+        function openTab(tabName, pageName) {
+            var tabContents = document.getElementsByClassName("tab-content");
+            var tabButtons = document.getElementsByClassName("tab-button");
+
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].style.display = "none";
+                tabButtons[i].classList.remove("active");
+            }
+
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName + "-button").classList.add("active");
+            
+            // Scroll to the top of the tab content
+            document.getElementById(tabName).scrollTop = 0;
+        }
+    </script>
+</body>
+</html>

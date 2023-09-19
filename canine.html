@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    window.onload = function() {
+        if (screen.width < 500) {
+            var mvp = document.getElementById('vp');
+            mvp.setAttribute('content','user-scalable=no,width=900');
+        }
+    }
+    </script>
+    
+    
+  <title></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+  <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-dg6o{background-color:#000000;color:#ffffff;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<script src="jquery.js"></script> 
+<script> 
+    $(function(){
+      $("#includedContent").load("graphs/az_case_map.html"); 
+    });
+</script> 
+<meta http-equiv="expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+</head>
+<body>
+
+
+  <div style="text-align:center; height:200px; font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;">
+    <p id="total_genomes" style="font-weight:bold; font-size:22;">
+        <span style="color:#b458d9;">Total Dogs Tested: X</span>
+    </p>
+    <br>
+    <p>
+      The purpose of this study is to learn more about how dogs living and working in different settings might be exposed to and impacted by SARS-CoV-2. The study will enroll dogs in Arizona that live and work in different environments (e.g., traditional households, shelters, free-roaming settings), and also those dogs filling service roles, such as therapy, herding, and working dogs, in addition to providing companionship.
+    </p>
+</div>
+
+<div style="width: 50%; min-width: 700px;float: left;">
+  <div style="padding: 15px; margin: 0 2% 4% 0;">
+    <h3 style="border-bottom: 1px solid; margin: 0 0 8px 0;font-size:32;">number of dogs in each category over time</h3>
+    <div style="position: relative; width: 100%;height: 650px;">
+    <!--<embed style="width:100%;height:100%;" src = "graphs/az_case_map.html">-->
+
+      <iframe style="width: 100%; height: 100%;" src=""></iframe>
+    </div>
+    
+  </div>
+  <p>Text here</p>
+  
+</div>
+
+<div style="clear: both;"></div>
+
+<div style="width: 50%; min-width: 700px;float: left;">
+  <div style=" padding: 15px; margin: 0 2% 4% 0;">
+    <!--<h3 style="border-bottom: 1px solid; margin: 0 0 8px 0;font-size:32;"> </h3>-->
+    <div style="position: relative; width: 100%;">
+      <h3 style="border-bottom: 1px solid; margin: 0 0 8px 0;font-size:32;">potential graph 2</h3>
+      <div>
+        <img src="" width="100%" class="d-inline-block align-center " alt="">  
+      </div>
+    </div>
+    <p> Text here</p>
+  </div>
+
+</div>
+
+</div>
+<!--<p style="margin-left:15px;">Group A <em>Streptococcus</em> (GAS) is a gram-positive human pathogen that can cause mild (e.g.,
+  pharyngitis) to severe invasive (e.g., necrotizing fasciitis) disease when these bacteria can
+  invade the bloodstream. Positive GAS cultures from sterile sites (e.g., blood) are reportable to
+  public health.
+  Invasive GAS cases in Arizona have been on the rise since 2014 and have showed no signs of
+  slowing during the pandemic. Data displayed here are provided by the Arizona Department of
+  Health Services (ADHS). Current and past data on iGAS cases in Arizona are available on the ADHS 
+  <a href="https://azdhs.gov/preparedness/epidemiology-disease-control/index.php#data-home" target="_blank">webpage</a>. Questions on iGAS as a reportable disease can be directed to the Healthcare – Associated Infections Program (<a href="mailto: HAI@azdhgs.gov">HAI@azdhgs.gov</a>).</p>-->
+</body>
+</html>

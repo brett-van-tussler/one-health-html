@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>One Health SARS-CoV-2 Surveillance Dashboard</title>
+    <style>
+        /* Style for the tab container */
+        .tab-container {
+            display: flex;
+            flex-direction: column; /* Change to column layout */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            height: calc(100vh - 40px); /* Set container height to 100% of viewport height */
+        }
+
+        /* Style for the tab buttons */
+        .tab-buttons {
+            display: flex; /* Display buttons side by side */
+        }
+
+        .tab-button {
+            background-color: #f7f7f7;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px 5px 0 0; /* Round only the top corners */
+            transition: background-color 0.3s ease;
+        }
+
+        .tab-button:hover {
+            background-color: #ddd;
+        }
+
+        /* Style for the active tab button */
+        .active {
+            background-color: #007bff !important;
+            color: #fff;
+        }
+
+        /* Style for the tab content */
+        .tab-content {
+            padding: 0;
+            border: 1px solid #ddd;
+            border-radius: 0 0 5px 5px;
+            width: 100%;
+            box-sizing: border-box;
+            flex: 1; /* Take remaining vertical space */
+            overflow-y: hidden; /* Add vertical scrollbar if content overflows */
+        }
+
+        /* Style for the iframe */
+        iframe {
+            width: 100%;
+            border: none;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Add this CSS to hide the scroll bar for the entire page */
+        body {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- Title div -->
+    <div class="title">One Health SARS-CoV-2 Surveillance Dashboard</div>
+
+    <div class="tab-container">
+        <!-- Tab buttons at the top, side by side -->
+        <div class="tab-buttons">
+            <button class="tab-button active" id="tab1-button" onclick="openTab('tab1', 'scv2.html')">SCV2</button>
+            <button class="tab-button" id="tab2-button" onclick="openTab('tab2', 'wildlife_rehab.html')">Wildlife Rehab</button>
+            <button class="tab-button" id="tab3-button" onclick="openTab('tab3', 'acknowledgements.html')">Acknowledgments</button>
+        </div>
+
+        <!-- Tab content -->
+        <div class="tab-content" id="tab1">
+            <iframe src="scv2_new.html"></iframe>
+        </div>
+
+        <div class="tab-content" id="tab2" style="display: none;">
+            <iframe src="wildlife_rehab.html"></iframe>
+        </div>
+
+        <div class="tab-content" id="tab3" style="display: none;">
+            <iframe src="acknowledgements.html"></iframe>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript function to switch tabs
+        function openTab(tabName, pageName) {
+            var tabContents = document.getElementsByClassName("tab-content");
+            var tabButtons = document.getElementsByClassName("tab-button");
+
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].style.display = "none";
+                tabButtons[i].classList.remove("active");
+            }
+
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName + "-button").classList.add("active");
+        }
+    </script>
+</body>
+</html>

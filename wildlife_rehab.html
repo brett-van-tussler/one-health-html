@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    window.onload = function() {
+        if (screen.width < 500) {
+            var mvp = document.getElementById('vp');
+            mvp.setAttribute('content','user-scalable=no,width=900');
+        }
+    }
+    </script>
+    
+    
+  <title></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+  <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-dg6o{background-color:#000000;color:#ffffff;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<script src="jquery.js"></script> 
+<script> 
+    $(function(){
+      $("#includedContent").load("graphs/az_case_map.html"); 
+    });
+</script> 
+<meta http-equiv="expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+</head>
+<body>
+  
+<div style="overflow:hidden;"><object type="text/html" data="graphs/total_wildlife_counts.html" style="width:100%;height:80px; overflow:hidden;"></object></div>
+<div style="text-align:center; font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;">
+<p style="margin: 0% 2% 0% 2%;">Description: The “SARS-CoV-2 Surveillance and Biosecurity Assessment in Wildlife Rehabilitation Facilities” is a new study being conducted with wildlife rehabilitation facilities across the United States. The purpose of this study is to expand our understanding of which North American mammalian wildlife species are susceptible to SARS-CoV-2, and determine the best biosecurity practices for protecting these species and their caretakers. Through this work, we aim to identify species in which documented infection has not previously occurred, and further understand how transmission dynamics of the virus may be influenced by human intervention. 
+
+
+This project is a collaboration between TGen North and the University of Florida College of Veterinary Medicine (UF), with support from the U.S. Department of Agriculture Animal and Plant Health Inspection Service (USDA APHIS).
+</p>
+</div>
+
+
+
+<div style="width: 50%; min-width: 700px;float: left;">
+  <div style=" padding: 15px; margin: 0 2% 4% 0;">
+    <!--<h3 style="border-bottom: 1px solid; margin: 0 0 8px 0;font-size:32;"> </h3>-->
+    <div style="position: relative; width: 100%;">
+      <h3 style="border-bottom: 1px solid; margin: 0 0 8px 0;font-size:32;">Map of the United States</h3>
+      <div>
+        <iframe style="width: 100%; height: 650px;" src=""></iframe>  
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="width: 50%; min-width: 700px;float: left;">
+  <div style=" padding: 15px; margin: 0 2% 4% 0;">
+    <h3 style="border-bottom: 1px solid; margin: 0 0 8px 0;font-size:32;">table of samples collected by state</h3>
+    <div style="position: relative; width: 100%;">
+      <div>
+        <p>Table of samples per state here</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="clear: both;"></div>
+
+<div style="width: 50%; min-width: 700px;float: left; margin-bottom: 2%;">
+  <div style=" padding: 15px; margin: 0 2% 4% 0;">
+    <h3 style="border-bottom: 1px solid; margin: 0 0 8px 0;font-size:32;">Number of Positive Animals</h3>
+    <div style="position: relative; width: 100%;height: 70%;">
+        <div>
+          Table of animals sampled here
+        </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,36 +7,28 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta http-equiv="expires" content="-1">
     <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
     <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/sticky-footer/">
 
-    <title>AZ invasive GAS Tracker</title>
-
+    <title> One Health SARS-CoV-2 Surveillance Dashboard</title>
 
     <!-- Custom styles for this template -->
-    <link href="emm_style.css" rel="stylesheet">
+    
     <!-- Bootstrap CSS -->
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMDHT9NCWB"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-FMDHT9NCWB');
-    </script>
-
-
+    <link href="style.css" rel="stylesheet">
+    <style>
+      #myTabs.nav-tabs li.nav-item:hover a.nav-link {
+        color: #dddddd !important;
+      }
+    </style>
 
     <script type="text/javascript">
       $('#myTabs a').click(function (e) {
@@ -48,7 +38,7 @@
     </script>
     <script>
     window.onload = function() {
-        if (screen.width < 500) {
+        if (screen.width < 700) {
             var mvp = document.getElementById('vp');
             mvp.setAttribute('content','width=900');
         }
@@ -56,79 +46,60 @@
     </script>
 
   </head>
-
-
-
-
-<body style="min-width: 750px;
+<body style="min-width: 700px;
 overflow: hidden;
 min-height: 100vh;
 display: flex;
 flex-direction: column;
 height: 100vh;">
   <div role="tabpanel">
-    <ul id="myTabs" class="nav nav-tabs flex-column flex-lg-row ms-auto " role="tablist">
+    <ul id="myTabs" style="border-width:2px; border-top: 2px solid #000000;border-left: 2px solid #000000; border-right: 2px solid #000000;border-color:#000000;" class="nav nav-tabs flex-column flex-lg-row ms-auto" role="tablist">
       <li>
-        <img src="images/tgen-coh.png" height="60" class="d-inline-block align-center " alt="" style="margin-left:10px;margin-top:10px">
+        <img src="images/TGen_North_CoH_Black_Medium.png" alt="" style="margin-left:10px;margin-top:10px;height: 60px;width:143px;">
       </li>
 
-      <li class="mt-auto mb-auto mr-auto" style="margin-left:10px;font-size:26px"><span style="font-size:26px"><b>AZ invasive Group A Strep Tracker</b></span>
+      <li class="mt-auto mb-auto mr-auto" style="margin-left:20px;font-size:26px"><span style="font-size:26px"><b>One Health SARS-CoV-2 Surveillance Dashboard</b></span>
       </li>
 
-      <li role="presentation" class="ms-auto" ><a href="#gas" id="gas-tab" class="active tab " role="tab active" data-toggle="tab" aria-controls="gas" aria-expanded="true">Circulating Strains</a></li>
+      <li role="presentation" class="" ><a href="#scv2" id="scv2-tab" class="active tab " role="tab active" data-toggle="tab" aria-controls="scv2" aria-expanded="true">Arizona SCV2 in Animals Pilot</a></li>
 
-      <li role="presentation" class=""><a href="#emm_49" class="tab" role="tab" id="circulating_strains-tab" data-toggle="tab" aria-controls="emm_49" aria-expanded="false">emm49 Tracker</a></li>
+      <li role="presentation" class=""><a href="#canine" class="tab" role="tab" id="canine-tab" data-toggle="tab" aria-controls="canine" aria-expanded="false">1000 Canine (1-K9) Study</a></li>
 
-      <li role="presentation" class=""><a href="#map" class="tab" role="tab" id="map-tab" data-toggle="tab" aria-controls="map" aria-expanded="false">Map</a></li>
+      <li role="presentation" class=""><a href="#wildlife_rehab" class="tab" role="tab" id="wildlife_rehab-tab" data-toggle="tab" aria-controls="wildlife_rehab" aria-expanded="false">Wildlife Rehabilitation Study</a></li>
 
-      <li role="presentation" class=""><a href="#arizona_case_data" class="tab" role="tab" id="arizona_case_data-tab" data-toggle="tab" aria-controls="arizona_case_data" aria-expanded="false">Arizona Case Data</a></li>
+      <li role="presentation" class=""><a href="#acknowledgements" class="tab" role="tab" id="acknowledgements-tab" data-toggle="tab" aria-controls="acknowledgements" aria-expanded="false">Acknowledgments and Resources</a></li>
 
-      <li role="presentation" class=""><a href="#summary" class="tab" role="tab" id="summary-tab" data-toggle="tab" aria-controls="summary" aria-expanded="false">Summary</a></li>
 
     </ul>
     <div class="clearfix"></div>
   </div>
     <!---->
 
-
-
   <div id="myTabContent" class="tab-content" style="height:100%;margin-bottom:60px;flex: auto;">
 
-    <div role="tabpanel" class="tab-pane fade in active show" id="gas" aria-labelledby="gas-tab">
-      <object class="tab_object" type="text/html" data="emm_trends.html"></object>
+    <div role="tabpanel" class="tab-pane fade in active show" id="scv2" aria-labelledby="scv2-tab">
+      <object class="tab_object" type="text/html" data="scv2.html"></object>
     </div>
 
-    <div role="tabpanel" class="tab-pane fade" id="emm_49" aria-labelledby="emm_49-tab">
-      <object class="tab_object" type="text/html" data="emm_49.html"></object>
+    <div role="tabpanel" class="tab-pane fade" id="canine" aria-labelledby="canine-tab">
+      <object class="tab_object" type="text/html" data="canine.html"></object>
     </div>
 
-    <div role="tabpanel" class="tab-pane fade" id="map" aria-labelledby="map-tab">
-      <object class="tab_object" type="text/html" data="emm_map.html"></object>
+    <div role="tabpanel" class="tab-pane fade" id="wildlife_rehab" aria-labelledby="wildlife_rehab-tab">
+      <object class="tab_object" type="text/html" data="wildlife_rehab.html"></object>
     </div>
 
-    <div role="tabpanel" class="tab-pane fade" id="arizona_case_data" aria-labelledby="arizona_case_data-tab">
-      <object class="tab_object" type="text/html" data="arizona_case_data.html"></object>
-    </div>
-
-    <div role="tabpanel" class="tab-pane fade" id="summary" aria-labelledby="summary-tab">
-      <object class="tab_object" type="text/html" data="emm_summary.html"></object>
+    <div role="tabpanel" class="tab-pane fade" id="acknowledgements" aria-labelledby="acknowledgements-tab">
+      <object class="tab_object" type="text/html" data="acknowledgements.html"></object>
     </div>
 
   </div>
 
   <footer class="footer">
     <p style="float:right; margin-right: 10px;margin-top: 15px;color:#000000;">
-      Updated
       <script> document.write(new Date().toLocaleDateString()); </script>
     </p>
-    <p style="float:right; margin-right: 10px; margin-top: 15px;color:#000000;">Enabled in part by data made available
-      by</p>
-    <a href="https://www.gisaid.org/" target="_blank" rel="noopener noreferrer" height="50%"><img
-        src="images/gisaid_logo.png" style="float:right;" href="https://www.gisaid.org/" alt=""></a>
   </footer>
 </body>
-
-
-
 
 </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    window.onload = function() {
+        if (screen.width < 500) {
+            var mvp = document.getElementById('vp');
+            mvp.setAttribute('content','user-scalable=no,width=900');
+        }
+    }
+    </script>
+  <title></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+  <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-dg6o{background-color:#000000;color:#ffffff;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<meta http-equiv="expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+</head>
+<body>
+<div style="overflow:hidden;"><object type="text/html" data="graphs/total_gas_counts.html" style="width:100%;height:80px; overflow:hidden;"></object></div>
+
+
+
+
+<div style="width: 50%; min-width: 700px;float: left;">
+  <div style=" padding: 15px; margin: 0 2% 4% 0;">
+    <h3 style="border-bottom: 1px solid; font-size:32;">Proportion of emm49 Genomes by Month</h3>
+    <div style="position: relative; padding-top: 60%;">
+    <div>
+      <iframe style="position: absolute; top: 0; left: 0; width: 100%;" src="graphs/emm_stacked_area.html" loading="lazy"></iframe>
+    </div>
+    </div>
+    
+  </div>
+  <p style="margin-left:15px;">The above graph displays the proportion of isolates characterized as emm49 by month
+    compared to the overall number of isolates sequenced.<br>
+    Approximately 30% of the isolates received for genomic characterization have been identified
+    as emm49. Several ongoing genomic clusters within this emm-type (samples collected
+    within a designated timeframe separated by 0-2 mutations) have also been discovered. These
+    clusters, many of which are connected with healthcare settings, may not have otherwise been
+    detected through routine public health surveillance mechanisms.</p>
+  
+  
+</div>
+
+<div style="width: 50%; min-width: 700px;float: left;">
+  <div style=" padding: 15px; margin: 0 2% 4% 0;">
+    <h3 style="border-bottom: 1px solid; margin: 0 0 8px 0;font-size:32;"> </h3>
+    <div style="position: relative; width: 100%;height: 70%;">
+     
+      <div>
+        <!-- <iframe loading="lazy" style="width:100%" src="https://nextstrain.org/community/tgennorth/igas-emm49-nextstrain/AZ/?d=tree&p=full&sidebar=closed&onlyPanels" style="padding-bottom: 10px;"></iframe> -->
+        <iframe loading="lazy" style="width:100%" src="https://nextstrain.org/community/tgennorth/igas-emm49-nextstrain/AZ?c=County&onlyPanels&p=full&sidebar=closed" style="padding-bottom: 10px;"></iframe>
+        
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+</div>
+</body>
+</html>
