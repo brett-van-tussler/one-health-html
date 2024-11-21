@@ -37,7 +37,7 @@
   
 <div style="overflow:hidden;"><object type="text/html" data="graphs/total_wildlife_counts.html" style="width:100%;height:80px; overflow:hidden;"></object></div>
 <div style="text-align:center; font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;">
-<p style="margin: 0% 2% 0% 2%;">Description: The “SARS-CoV-2 Surveillance and Biosecurity Assessment in Wildlife Rehabilitation Facilities” is a new study being conducted with wildlife rehabilitation facilities across the United States. The purpose of this study is to expand our understanding of which North American mammalian wildlife species are susceptible to SARS-CoV-2, and determine the best biosecurity practices for protecting these species and their caretakers. Through this work, we aim to identify species in which documented infection has not previously occurred, and further understand how transmission dynamics of the virus may be influenced by human intervention. 
+<p style="margin: 0% 2% 0% 2%;">The “SARS-CoV-2 Surveillance and Biosecurity Assessment in Wildlife Rehabilitation Facilities” is a new study being conducted with wildlife rehabilitation facilities across the United States. The purpose of this study is to expand our understanding of which North American mammalian wildlife species are susceptible to SARS-CoV-2, and determine the best biosecurity practices for protecting these species and their caretakers. Through this work, we aim to identify species in which documented infection has not previously occurred, and further understand how transmission dynamics of the virus may be influenced by human intervention. 
 
 
 This project is a collaboration between TGen North and the University of Florida College of Veterinary Medicine (UF), with support from the U.S. Department of Agriculture Animal and Plant Health Inspection Service (USDA APHIS).
@@ -52,7 +52,7 @@ This project is a collaboration between TGen North and the University of Florida
     <div style="position: relative; width: 100%;">
       <h3 style="border-bottom: 1px solid; margin: 0 0 8px 0;font-size:32;">Map of the United States</h3>
       <div>
-        <iframe style="width: 100%; height: 650px;" src=""></iframe>  
+        <iframe style="width: 100%; height: 650px;" src="graphs/us_map.html"></iframe>  
       </div>
     </div>
   </div>
@@ -71,16 +71,57 @@ This project is a collaboration between TGen North and the University of Florida
 
 <div style="clear: both;"></div>
 
+
+<div style="clear: both;"></div>
 <div style="width: 50%; min-width: 700px;float: left; margin-bottom: 2%;">
   <div style=" padding: 15px; margin: 0 2% 4% 0;">
     <h3 style="border-bottom: 1px solid; margin: 0 0 8px 0;font-size:32;">Number of Positive Animals</h3>
     <div style="position: relative; width: 100%;height: 70%;">
+      <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-dg6o center">Animal Type</th>
+            <th class="tg-dg6o center">Type of SARS-CoV-2 Assay</th>
+            <th class="tg-dg6o center"># Positive</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span style="font-weight:400;font-style:normal">Dog</span></td>
+            <td><span style="font-weight:400;font-style:normal">PCR (swab sample)</span></td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td><span style="font-weight:400;font-style:normal">Dog</span></td>
+            <td><span style="font-weight:400;font-style:normal">Serology (blood sample)</span></td>
+            <td>54</td>
+          </tr>
+          <tr>
+            <td><span style="font-weight:400;font-style:normal">Cat</span></td>
+            <td><span style="font-weight:400;font-style:normal">PCR (swab sample)</span></td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td><span style="font-weight:400;font-style:normal">Cat</span></td>
+            <td><span style="font-weight:400;font-style:normal">Serology (blood sample)</span></td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td><span style="font-weight:400;font-style:normal">Zoological Animal</span></td>
+            <td><span style="font-weight:400;font-style:normal">PCR (swab sample)</span></td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><span style="font-weight:400;font-style:normal">Zoological Animal</span></td>
+            <td><span style="font-weight:400;font-style:normal">Serology (blood sample)</span></td>
+            <td>22 (all vaccinated)</td>
+          </tr>
+        </tbody>
+      </table>
         <div>
-          Table of animals sampled here
+          TGen's One Health surveillance efforts in Arizona identified 98 unique animals that have tested positive for SARS-CoV-2 or had evidence of exposure to the virus (or immune response to vaccination) from 2021-2023. The above table includes 7 dogs and 3 cats that had evidence of viral infection (PCR +) and neutralizing antibodies (serology +) at the time of collection. SARS-CoV-2 was detected in a squirrel monkey in July 2022. All seropositive zoologic animals were vaccinated against SARS-CoV-2. All free-ranging wildlife and ferrets tested negative for SARS-CoV-2.
         </div>
     </div>
   </div>
-</div>
-
 </body>
 </html>
